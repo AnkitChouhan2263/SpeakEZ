@@ -1,17 +1,16 @@
 package com.example.speakez.domain.model
 
 data class AnalysisResult(
+    val sessionId: String,
+    val confidenceScore: Float,
+    val clarityScore: Float,
+    val paceScore: Float,
+    val contentScore: Float,
+    val grammarScore: Float,
     val wpm: Int,
-    val silenceGaps: List<Float>,
-    val grammarScore: Int,
-    val sentiment: String,
-    val fillerWordCount: Map<String, Int>,
+    val fillerWordCount: Int,
+    val transcription: String,
+    val suggestions: List<String>,
     val starMethodCheck: Boolean,
-    // From Radar Chart
-    val confidence: Float,
-    val clarity: Float,
-    val pace: Float,
-    val content: Float,
-    val grammar: Float,
-    val idealAnswer: String
+    val idealAnswer: String? = null
 )

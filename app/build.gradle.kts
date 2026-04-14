@@ -10,12 +10,12 @@ plugins {
 
 android {
     namespace = "com.example.speakez"
-    compileSdk = 36
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.speakez"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -84,17 +84,16 @@ dependencies {
 
     // Firebase & ML Kit
     implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.ml.kit.speech)
     implementation(libs.firebase.ml.kit.vision)
 
     // Accompanist
     implementation(libs.accompanist.permissions)
 
-    testImplementation("junit:junit:4.13.2") // Explicit dependency
-    androidTestImplementation(libs.androidx.junit.v115)
-    androidTestImplementation(libs.androidx.espresso.core.v351)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.compose.ui.test.manifest.v153)
+    debugImplementation(libs.androidx.ui.test.manifest)
 }
